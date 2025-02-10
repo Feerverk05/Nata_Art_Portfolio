@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Natalia Husak Art</title>    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FREEHTML5.CO" />
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Animate -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon -->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Додатковий CSS для кошика та модального вікна -->
+    <style>
+      /* Значок кошика у хедері */
+      .cart-icon {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 18px;
+        color: #fff;
+        cursor: pointer;
+      }
+      .cart-icon i {
+        margin-right: 5px;
+      }
+      /* Модальне вікно */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.6);
+      }
+      .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        width: 80%;
+        max-width: 700px;
+        position: relative;
+      }
+      .close-modal {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      .buy-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        background: black;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 3px;
+      }
+      
+      /* Стилі для кошика */
+      #cart-items {
+        list-style-type: none;
+        padding: 0;
+      }
+      #cart-items li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+      }
+      .cart-item-details {
+        display: flex;
+        align-items: center;
+      }
+      .cart-item-details img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        object-fit: cover;
+      }
+      .quantity-control {
+        display: flex;
+        align-items: center;
+      }
+      .quantity-control button {
+        background: #f1f1f1;
+        border: none;
+        padding: 5px 10px;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+      #cart-total {
+        font-weight: bold;
+        text-align: right;
+        margin-top: 15px;
+      }
+      #checkout-btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: black;
+        color: white;
+        border: none;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+      
+      .fh5co-post-entry {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .fh5co-post-entry article {
+        margin-bottom: 20px;
+      }
+	  
+	  
+	  .back-link {
+			color: black;
+			justify-content: right;
+	  }
+    </style>
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Offcanvas -->
+    <div id="fh5co-offcanvas">
+      <a href="#" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
+        <span><i class="icon-cross3"></i> <span>Close</span></span>
+      </a>
+      <div class="fh5co-bio">
+        <figure>
+          <img src="images/natali.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+        </figure>
+        <h3 class="heading">About Me</h3>
+        <h2>Natali Husak</h2>
+        <p>I am an artist from Ukraine. 
+			I create paintings with my soul and send them all over the world.
+			Thank you for choosing my art.
+			I'm happy to paint for you!</p>
+      <ul class="fh5co-social">
+        <li>
+          <a href="#" onclick="alert('E-mail: natapaintergirl@gmail.com'); return false;">
+            <i class="icon-mail"></i>
+          </a>
+        </li>
+       
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=100035842621461">
+            <i class="icon-facebook"></i>
+          </a>
+        </li>
+        
+      </ul>
+      </div>
+
+      <div class="fh5co-menu">
+        <div class="fh5co-box">
+          <h3 class="heading">Categories</h3>
+          <ul>
+
+			<li><a href="ukrainian.html">Ukrainian Painting</a></li>
+            <li><a href="sea.html">Sea Painting</a></li>
+            <li><a href="child.html">Child Painting</a></li>
+            <li><a href="lanscape.html">Lanscape Painting</a></li>
+            <li><a href="animal.html">Animal Painting</a></li>
+
+	
+          </ul>
+        </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END Offcanvas -->
+
+    <!-- Хедер -->
+    <header id="fh5co-header">
+      <div class="container-fluid">
+        <div class="row">
+          <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+		 
+          
+          <div class="col-lg-12 col-md-12 text-center">
+            <h1 id="fh5co-logo"><a href="index.html">Natali Husak</a></h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END Хедер -->
+
+    <!-- Основний контент з картинками (записи) -->
+    <div class="container-fluid">
+      <div class="row fh5co-post-entry">
+        <!-- Приклад одного блоку -->
+        <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
+          <figure>
+            <a href="single115.html">
+              <img src="images/48.jpg" alt="Image" class="img-responsive">
+            </a>
+          </figure>
+          <h2 class="fh5co-article-title"><a href="single115.html">Sunset in mountains</a></h2>
+		  <span class="fh5co-meta fh5co-date">Size: 12*20 in / 30*50 cm</span>
+        </article>
+
+        <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
+          <figure>
+            <a href="single34.html">
+              <img src="images/42.jpg" alt="Image" class="img-responsive">
+            </a>
+          </figure>
+          <h2 class="fh5co-article-title"><a href="single34.html">Street in bloom</a></h2>
+		  <span class="fh5co-meta fh5co-date">Size: 13.7*17.7 in / 35*45 cm</span>
+        </article>
+        <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
+          <figure>
+            <a href="single119.html">
+              <img src="images/8.jpg" alt="Image" class="img-responsive">
+            </a>
+          </figure>
+          <h2 class="fh5co-article-title"><a href="single119.html">Greece street</a></h2>
+		  <span class="fh5co-meta fh5co-date">Size: 8*12 in / 20*30 cm</span>
+        </article>
+
+        <!-- Інший блок -->
+       
+        
+        <!-- Третій блок -->
+       
+
+        <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
+          <figure>
+            <a href="single42.html">
+              <img src="images/14.jpg" alt="Image" class="img-responsive">
+            </a>
+          </figure>
+          <h2 class="fh5co-article-title"><a href="single42.html">Summer cafe painting</a></h2>
+		  <span class="fh5co-meta fh5co-date">Size: 11.8*19.6 in / 30*50 cm</span>
+        </article>
+      </div>
+    </div>
+
+    <!-- Футер -->
+    <footer id="fh5co-footer">
+      <p>
+        <small>&copy; 2025. All Rights Reserverd</small>
+      </p>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+    
+    
+  </body>
+</html>
